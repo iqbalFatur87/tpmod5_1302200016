@@ -14,6 +14,20 @@ namespace tpmod5_1302200016
             SayaTubeVideo video = new SayaTubeVideo("Tutorial Design By Contract – Muhamad Iqbal F");
             video.IncreasePlayCount(6540);
             video.PrintVideoDetails();
+
+            // Percobaan Judul Video di set Null
+            video.SetJudul(null);
+
+            // Percobaan IncreasePlayCount di set ke 10.000.000
+            video.IncreasePlayCount(10000001);
+            video.PrintVideoDetails();
+
+            // Percobaan IncreasePlayCount ketika di set melebihi batas maksimal
+            for (int i = 0; i < 220; i++)
+            {
+                video.IncreasePlayCount(9999999);
+            }
+            video.PrintVideoDetails();
         }
     }
 }
